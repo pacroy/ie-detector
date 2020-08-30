@@ -4,7 +4,12 @@
         <title>Test IE</title>
         <script type='text/javascript'>
             var ua = window.navigator.userAgent;
-            alert(ua);
+            var msie = ua.indexOf("MSIE ");
+        
+            if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer
+            {
+                alert("This web site does not support Internet Explorer. Please open in a modern browser.");
+            }
         </script>
     </head>
     <body>
